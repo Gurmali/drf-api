@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import Likes
 
 
-class LikesSerializers(serializers.ModelSerializer):
+class LikesSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
